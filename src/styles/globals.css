@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply bg-primary hover:bg-primary-dark active:bg-primary-darker py-1.5 px-5 rounded-md transition-all duration-300;
+  }
+}
