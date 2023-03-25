@@ -1,9 +1,9 @@
 import { FC } from "react";
 import Image from "next/image";
-import reactLogo from "@/assets/images/react-icon.svg";
-import instagramLogo from "@/assets/images/instagram-logo.svg";
-import telegramLogo from "@/assets/images/telegram-icon.svg";
-import githubLogo from "@/assets/images/github-icon.svg";
+import reactLogo from "@/../public/images/react-icon.svg";
+import instagramLogo from "@/../public/images/instagram-logo.svg";
+import telegramLogo from "@/../public/images/telegram-icon.svg";
+import githubLogo from "@/../public/images/github-icon.svg";
 import HeaderIcons from "@/components/header/HeaderIcons";
 import HeaderIconItem from "@/components/header/HeaderIconItem";
 
