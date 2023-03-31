@@ -43,8 +43,10 @@ const Navbar: FC = () => {
                 <NavbarLink url='/about-me'>درباره من</NavbarLink>
                 <NavbarLink url='/contact-me'>تماس با من</NavbarLink>
               </ul>
-              <button className="block lg:hidden bg-black w-4 h-4">
-              
+              <button className="block lg:hidden w-8 h-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-full h-full">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                </svg>
               </button>
               <p className={`${josefin.className} font-bold text-lg`}>
                 Saman Safaei
