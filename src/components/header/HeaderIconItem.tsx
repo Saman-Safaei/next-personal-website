@@ -17,7 +17,7 @@ const HeaderIconItem: FC<HeaderIconItem> = ({
   priority = false,
 }) => (
   <li>
-    <a href={link}>
+    <a href={link} target='_blank'>
       <Image className={className} src={logo} alt={alt} priority={priority} />
     </a>
   </li>
