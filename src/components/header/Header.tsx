@@ -12,7 +12,7 @@ export interface HeaderProps {}
 const Header: FC<HeaderProps> = () => {
   return (
     <header className="w-full bg-gradient-to-b from-gray-700/50 to-transparent">
-      <div className="flex flex-col-reverse lg:flex-row items-center gap-6 px-6 py-10 box mx-auto">
+      <div className="flex flex-col-reverse lg:flex-row items-center gap-6 px-6 py-10 box mx-auto min-h-[86vh]">
         <div className="grow flex flex-col items-center lg:items-start">
           <h2 className="text-3xl text-center font-bold mb-3">
             سامان صفائی هستم
@@ -41,7 +41,7 @@ const Header: FC<HeaderProps> = () => {
           </HeaderIcons>
         </div>
         <div className="w-full sm:w-[70%] md:w-1/2 lg:w-1/3 shrink-0">
-          <div className="w-full bg-gradient-to-br from-gray-300/5 to-gray-300/10 rounded-full p-6 overflow-hidden border-solid border border-gray-700">
+          <div className="w-full bg-gradient-to-br from-gray-300/5 to-gray-300/10 rounded-full p-6 overflow-hidden border-dashed border-4 border-gray-700">
             <Image
               className="block w-full aspect-square rounded-full animate-spin-slow"
               src={reactLogo}
