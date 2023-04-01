@@ -1,17 +1,26 @@
-import { Vazirmatn } from "next/font/google";
-import { Fragment } from "react";
-import type { ReactNode, FC } from "react";
-import Header from "@/components/header/Header";
-import Navbar from "@/components/navbar/Navbar";
-import Head from 'next/head'
+import { Vazirmatn } from 'next/font/google';
+import { Fragment } from 'react';
+import type { ReactNode, FC } from 'react';
+import Header from '@/components/header/Header';
+import Navbar from '@/components/navbar/Navbar';
+import Head from 'next/head';
+import Footer from '@/components/footer/Footer';
 
-const vazirmatn = Vazirmatn({ subsets: ["latin"], variable: "--vazirmatn" });
+const vazirmatn = Vazirmatn({ subsets: ['latin'], variable: '--vazirmatn' });
 
 export interface DefaultLayoutProps {
   children: ReactNode;
+  header?: boolean;
+  navbar?: boolean;
+  footer?: boolean;
 }
 
-const DefaultLayout: FC<DefaultLayoutProps> = ({ children }) => {
+const DefaultLayout: FC<DefaultLayoutProps> = ({
+  children,
+  footer,
+  navbar,
+  header,
+}) => {
   return (
     <Fragment>
       <Head>
@@ -22,9 +31,10 @@ const DefaultLayout: FC<DefaultLayoutProps> = ({ children }) => {
           font-family: ${vazirmatn.style.fontFamily};
         }
       `}</style>
-      <Navbar />
-      <Header />
-      <main>{children}</main>
+      {navbar && <Navbar />}
+      {header && <Header />}
+      <main className='min-h-screen'>{children}</main>
+      {footer && <Footer />}
     </Fragment>
   );
 };
