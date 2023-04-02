@@ -36,7 +36,7 @@
 
 @layer components {
   .btn {
-    @apply bg-primary hover:bg-primary-dark active:bg-primary-darker py-1.5 px-5 rounded-md text-sm transition-all duration-300;
+    @apply bg-primary hover:bg-primary-dark active:bg-primary-darker py-1.5 px-5 rounded-md transition-all duration-300;
   }
 }
 
@@ -46,5 +46,8 @@
   }
   .animated-text {
     @apply bg-gradient-to-r from-primary-dark via-cyan-200 to-primary-dark text-transparent bg-clip-text animate-bg-move bg-[length:200%_100%];
+  }
+  .golden-text {
+    @apply bg-gradient-to-r from-amber-400 via-fuchsia-300 to-amber-400 text-transparent bg-clip-text animate-bg-move bg-[length:200%_100%];
   }
 }
