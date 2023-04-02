@@ -13,12 +13,12 @@ const Skill: FC<SkillProps> = ({ rate, title }) => {
   const level =
     rate >= 3 ? 'حرفه ای' : rate >= 2 ? 'متوسط' : rate >= 1 ? 'مبتدی' : '';
 
-  const goldenClass = rate >= 3 ? 'golden-text' : '';
+  const goldenClass = rate >= 3 ? 'golden-text font-bold' : '';
 
   return (
     <div className='flex flex-col items-center'>
       <h4 className='text-center mb-1.5 text-sm'>
-        <span className={`${goldenClass} ${currentFont.className} font-bold`}>
+        <span className={`${goldenClass} ${currentFont.className}`}>
           {title}
         </span>{' '}
         <span className='text-gray-400'>- {level}</span>
