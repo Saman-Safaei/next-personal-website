@@ -62,7 +62,7 @@ const Footer: FC<FooterProps> = () => {
           <p className='text-center text-sm text-gray-400'>saman_safaei_ir</p>
         </li>
       </ul>
-      <p className='text-center text-gray-400'>طراحی و توسعه توسط سامان صفائی</p>
+      <p className='text-center text-gray-400'>- طراحی و توسعه توسط سامان صفائی -</p>
     </footer>
   );
 };
