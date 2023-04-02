@@ -49,6 +49,7 @@ const Home: NextPageWithLayout = () => {
           <Skill rate={1} title={'MSW.js'} />
           <Skill rate={2} title={'React DevTools'} />
           <Skill rate={2} title={'Redux DevTools'} />
+          <Skill rate={2} title={'Git + GitHub'} />
         </SkillContainer>
       </section>
       <section className='bg-gray-900 box mx-auto py-4'></section>
