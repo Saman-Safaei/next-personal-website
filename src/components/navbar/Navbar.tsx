@@ -11,7 +11,7 @@ const Navbar: FC = () => {
   const navbarRef = useRef(null);
 
   const onScrollHandler = useCallback(() => {
-    const scroll = 200;
+    const scroll = 300;
     if (window.scrollY > scroll && !fixed) setFixed(true);
     else if (window.scrollY <= scroll && fixed) setFixed(false);
   }, [fixed]);
@@ -35,7 +35,7 @@ const Navbar: FC = () => {
           timeout={300}>
           <div
             ref={navbarRef}
-            className={`${dynamicClasses} w-full h-navbar z-20 backdrop-blur`}>
+            className={`${dynamicClasses} w-full h-navbar z-20 backdrop-blur-lg`}>
             <nav className='flex justify-between items-center h-full box mx-auto px-6'>
               <ul className='hidden lg:flex flex-row gap-6'>
                 <NavbarLink url='/'>صفحه اصلی</NavbarLink>
