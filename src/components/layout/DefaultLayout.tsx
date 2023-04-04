@@ -1,10 +1,10 @@
 import { Vazirmatn } from 'next/font/google';
 import { Fragment } from 'react';
 import type { ReactNode, FC } from 'react';
-import Header from '@/components/header/Header';
-import Navbar from '@/components/navbar/Navbar';
+import Header from '@/components/layout/header/Header';
+import Navbar from '@/components/layout/navbar/Navbar';
 import Head from 'next/head';
-import Footer from '@/components/footer/Footer';
+import Footer from '@/components/layout/footer/Footer';
 
 const vazirmatn = Vazirmatn({ subsets: ['latin'], variable: '--vazirmatn' });
 
