@@ -1,6 +1,6 @@
 import { Inter as CurrentFont } from 'next/font/google';
 import type { FC } from 'react';
-import Star from '@/components/skill/Star';
+import Star from '@/components/pages/index/skill/Star';
 
 const currentFont = CurrentFont({ subsets: ['latin'] });
 
