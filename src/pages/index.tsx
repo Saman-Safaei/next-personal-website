@@ -1,13 +1,18 @@
 import type { NextPageWithLayout } from '@/pages/_app';
 import DefaultLayout from '@/components/layout/DefaultLayout';
 import Image from 'next/image';
+import Skill from '@/components/pages/index/skill/Skill';
+import SkillContainer from '@/components/pages/index/skill/SkillContainer';
+import Projects from '@/components/pages/index/project/Projects';
+import Project from '@/components/pages/index/project/Project';
+
 import devImage from '~/public/images/ab-img.png';
-import Skill from '@/components/skill/Skill';
-import SkillContainer from '@/components/skill/SkillContainer';
+import parsAcademyScreenShot from '~/public/images/parsacademy-screenshot.png';
+import rSpotifyScreenShot from '~/public/images/r-spotify-screenshot.png';
 
 const Home: NextPageWithLayout = () => {
   return (
-    <div className='relative flex flex-col items-stretch gap-40 py-8 px-6 z-0'>
+    <div className='relative flex flex-col items-stretch gap-56 py-8 px-6 z-0'>
       <span className='absolute top-8 bottom-8 right-1/2 translate-x-1/2 border-dashed border-r-4 border-r-gray-400 -z-[1]' />
       <section className='bg-gray-900 box mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6 py-4'>
         <div>
@@ -52,7 +57,41 @@ const Home: NextPageWithLayout = () => {
           <Skill rate={2} title={'Git + GitHub'} />
         </SkillContainer>
       </section>
-      <section className='bg-gray-900 box mx-auto py-4'></section>
+      <section className='bg-gray-900 box mx-auto py-4'>
+        <h3 className='text-3xl font-bold text-center mb-6'>
+          پروژه های انجام شده
+        </h3>
+        <Projects>
+          <Project
+            imageCover={parsAcademyScreenShot}
+            imageAlt={'Pars Academy'}
+            title='سایت ParsAcademy'
+            previewLink='https://parsacademy.xyz'
+            techStack={['Splide Js', 'Prism Js']}>
+            ساخت لندینگ و داشبورد کاربران سایت پارس آکادمی. استفاده از Browser
+            History Api برای ساخت SPA با Javascript.
+          </Project>
+          <Project
+            imageCover={rSpotifyScreenShot}
+            imageAlt='R-Spotify'
+            title='سایت R-Spotify'
+            gitHubLink='https://github.com/saman-safaei/r-spotify'
+            techStack={[
+              'TypeScript',
+              'React',
+              'Axios',
+              'Formik',
+              'React Transition Group',
+              'Tailwindcss',
+              'ReactQuery',
+              'ReduxToolkit',
+              'HeroIcons',
+            ]}>
+            ساخت یک کلون ساده از سایت Spotify، دارای قابلیت کش کردن ریکوئست های
+            انجام شده در فرانت اند. نوشتن اصولی کد ها و بهینه سازی سایت.
+          </Project>
+        </Projects>
+      </section>
     </div>
   );
 };
