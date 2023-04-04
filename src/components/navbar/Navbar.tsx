@@ -40,8 +40,6 @@ const Navbar: FC = () => {
               <ul className='hidden lg:flex flex-row gap-6'>
                 <NavbarLink url='/'>صفحه اصلی</NavbarLink>
                 <NavbarLink url='/blog'>وبلاگ</NavbarLink>
-                <NavbarLink url='/about-me'>درباره من</NavbarLink>
-                <NavbarLink url='/contact-me'>تماس با من</NavbarLink>
               </ul>
               <button className="block lg:hidden w-8 h-8">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-full h-full">
