@@ -1,10 +1,11 @@
 import { Vazirmatn } from 'next/font/google';
 import { Fragment } from 'react';
 import type { ReactNode, FC } from 'react';
+import Head from 'next/head';
 import Header from '@/components/layout/header/Header';
 import Navbar from '@/components/layout/navbar/Navbar';
-import Head from 'next/head';
 import Footer from '@/components/layout/footer/Footer';
+import Sidebar from '@/components/layout/sidebar/Sidebar';
 
 const vazirmatn = Vazirmatn({ subsets: ['latin'], variable: '--vazirmatn' });
 
@@ -31,7 +32,12 @@ const DefaultLayout: FC<DefaultLayoutProps> = ({
           font-family: ${vazirmatn.style.fontFamily};
         }
       `}</style>
-      {navbar && <Navbar />}
+      {navbar && (
+        <Fragment>
+          <Navbar />
+          <Sidebar />
+        </Fragment>
+      )}
       {header && <Header />}
       <main className='min-h-screen'>{children}</main>
       {footer && <Footer />}
