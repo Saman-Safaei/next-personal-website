@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
-import HeaderIcons from "@/components/header/HeaderIcons";
-import HeaderIconItem from "@/components/header/HeaderIconItem";
+import HeaderIcons from "@/components/layout/header/HeaderIcons";
+import HeaderIconItem from "@/components/layout/header/HeaderIconItem";
 import reactLogo from "~/public/images/react-icon.svg";
 import instagramLogo from "~/public/images/instagram-logo.svg";
 import telegramLogo from "~/public/images/telegram-icon.svg";

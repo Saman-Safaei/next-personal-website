@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import { Josefin_Sans } from 'next/font/google';
-import NavbarLink from '@/components/navbar/NavbarLink';
+import NavbarLink from '@/components/layout/navbar/NavbarLink';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 
 const josefin = Josefin_Sans({ subsets: ['latin'] });
