@@ -1,15 +1,19 @@
 import type { FC } from 'react';
-import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
+import { Fragment, useRef } from 'react';
 import { Josefin_Sans } from 'next/font/google';
 import NavbarLink from '@/components/layout/navbar/NavbarLink';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import useScrollData from '@/hooks/useScrollData';
+import { useAppDispatch } from '@/store';
+import { actions as uiActions } from '@/store/ui-slice';
 
 const josefin = Josefin_Sans({ subsets: ['latin'] });
 
 const Navbar: FC = () => {
   const navbarRef = useRef(null);
   const [fixed] = useScrollData(300);
+
+  const dispatch = useAppDispatch();
 
   const dynamicClasses = fixed
     ? 'fixed top-0 right-0 bg-gray-700/50'
@@ -33,7 +37,9 @@ const Navbar: FC = () => {
                 <NavbarLink url='/'>صفحه اصلی</NavbarLink>
                 <NavbarLink url='/blog'>وبلاگ</NavbarLink>
               </ul>
-              <button className='block lg:hidden w-8 h-8'>
+              <button
+                onClick={() => dispatch(uiActions.openSidebar())}
+                className='block lg:hidden w-8 h-8'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   fill='none'
