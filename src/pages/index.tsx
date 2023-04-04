@@ -9,6 +9,7 @@ import Project from '@/components/pages/index/project/Project';
 import devImage from '~/public/images/ab-img.png';
 import parsAcademyScreenShot from '~/public/images/parsacademy-screenshot.png';
 import rSpotifyScreenShot from '~/public/images/r-spotify-screenshot.png';
+import type { GetStaticProps } from 'next';
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -101,5 +102,12 @@ Home.getLayout = page => (
     {page}
   </DefaultLayout>
 );
+
+export const getStaticProps: GetStaticProps = () => {
+  return {
+    props: {},
+    revalidate: 7200,
+  };
+};
 
 export default Home;
