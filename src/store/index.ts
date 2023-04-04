@@ -7,10 +7,11 @@ const createStore = () => {
     reducer: {
       [uiSlice.name]: uiSlice.reducer,
     },
+    devTools: false,
   });
 };
 
-export type StoreType = ReturnType<typeof createStore>
+export type StoreType = ReturnType<typeof createStore>;
 export type StoreState = ReturnType<StoreType['getState']>;
 export type AppDispatch = StoreType['dispatch'];
 
