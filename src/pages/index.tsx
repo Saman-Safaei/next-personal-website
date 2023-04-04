@@ -31,7 +31,7 @@ const Home: NextPageWithLayout = () => {
             کنم. به زبان تایپ اسکریپت تقریبا مسلط هستم و این زبان رو به جاوا
             اسکریپت ترجیح می دم.
           </p>
-          <a download className='btn' href='/images/ab-img.png'>
+          <a download className='btn' href='/react-cv.pdf'>
             دانلود رزومه
           </a>
         </div>
