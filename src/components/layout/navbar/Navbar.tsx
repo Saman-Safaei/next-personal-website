@@ -91,8 +91,11 @@ const Navbar: FC = () => {
                 </NavbarDropdown>
               </ul>
               <div className='h-full flex flex-row items-center gap-2'>
-                <p className={`${josefin.className} font-bold text-lg`}>
-                  Saman Safaei
+                <p className={`${josefin.className} font-bold text-lg hidden lg:block`}>
+                  {"<Saman Safaei />"}
+                </p>
+                <p className={`${josefin.className} font-bold text-lg block lg:hidden`}>
+                  {"<Saman />"}
                 </p>
               </div>
             </nav>
