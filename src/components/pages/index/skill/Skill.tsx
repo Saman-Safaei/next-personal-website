@@ -1,6 +1,7 @@
 import { Inter as CurrentFont } from 'next/font/google';
 import type { FC } from 'react';
 import Star from '@/components/pages/index/skill/Star';
+import useLocale from '@/hooks/useLocale';
 
 const currentFont = CurrentFont({ subsets: ['latin'] });
 
@@ -10,8 +11,16 @@ export interface SkillProps {
 }
 
 const Skill: FC<SkillProps> = ({ rate, title }) => {
+  const { t } = useLocale();
+  
   const level =
-    rate >= 3 ? 'حرفه ای' : rate >= 2 ? 'متوسط' : rate >= 1 ? 'مبتدی' : '';
+    rate >= 3
+      ? t.skillALevel
+      : rate >= 2
+      ? t.skillBLevel
+      : rate >= 1
+      ? t.skillCLevel
+      : '';
 
   const goldenClass = rate >= 3 ? 'golden-text font-bold' : '';
 

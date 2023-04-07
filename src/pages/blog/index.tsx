@@ -1,12 +1,16 @@
 import type { NextPageWithLayout } from '@/pages/_app';
 import DefaultLayout from '@/components/layout/DefaultLayout';
-import type {GetStaticProps} from "next";
+import type { GetStaticProps } from 'next';
+import useLocale from '@/hooks/useLocale';
 
 const Blog: NextPageWithLayout = () => {
+  const { t } = useLocale();
   return (
     <div className='py-20'>
-      <p className='text-center w-fit mx-auto text-2xl mb-3 animated-text'>به زودی در دسترس قرار می گیرد</p>
-      <p className='text-lg text-center text-gray-400'>صفحه در دست ساخت می باشد</p>
+      <p className='text-center w-fit mx-auto text-2xl mb-3 animated-text'>
+        {t.comingSoon}
+      </p>
+      <p className='text-lg text-center text-gray-400'>{t.pageInDevelop}</p>
     </div>
   );
 };

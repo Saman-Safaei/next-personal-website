@@ -50,7 +50,7 @@ const Project: FC<ProjectProps> = ({
           height={typeof imageCover === 'string' ? 200 : undefined}
         />
       </div>
-      <div className='p-4 flex flex-col items-stretch justify-start gap-3 grow'>
+      <div dir='rtl' className='p-4 flex flex-col items-stretch justify-start gap-3 grow'>
         <h3 className='font-bold text-xl'>{title}</h3>
         <p className='font-light text-justify mb-1'>{children}</p>
         <p className='font-light text-sm' dir='ltr'>

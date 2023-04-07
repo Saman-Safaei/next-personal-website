@@ -1,10 +1,13 @@
 import bg from '~/public/images/map-color-overlay.png';
 import type { FC } from 'react';
 import Image from 'next/image';
+import useLocale from '@/hooks/useLocale';
 
 export interface FooterProps {}
 
 const Footer: FC<FooterProps> = () => {
+  const { t } = useLocale();
+
   return (
     <footer className='z-0 relative py-20 px-6 overflow-hidden'>
       <Image
@@ -12,7 +15,7 @@ const Footer: FC<FooterProps> = () => {
         src={bg}
         alt='footer-background'></Image>
       <h3 className='text-center text-3xl font-bold mb-4 lg:mb-6'>
-        تماس با من
+        {t.layoutFooterTitle}
       </h3>
       <ul className='box mx-auto flex flex-col md:flex-row justify-center items-center gap-4 mb-6'>
         <li className='w-full max-w-xs bg-gray-800/80 rounded-md p-4 text-gray-300'>
@@ -29,7 +32,9 @@ const Footer: FC<FooterProps> = () => {
               />
             </svg>
           </span>
-          <h4 className='text-center mb-1 text-xl font-bold'>شماره تماس</h4>
+          <h4 className='text-center mb-1 text-xl font-bold'>
+            {t.layoutFooterPhoneTitle}
+          </h4>
           <p className='text-center text-sm text-gray-400'>09196043787</p>
         </li>
         <li className='w-full max-w-xs bg-gray-800/80 rounded-md p-4 text-gray-300'>
@@ -43,7 +48,9 @@ const Footer: FC<FooterProps> = () => {
               <path d='M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z' />
             </svg>
           </span>
-          <h4 className='text-center mb-1 text-xl font-bold'>ایمیل</h4>
+          <h4 className='text-center mb-1 text-xl font-bold'>
+            {t.layoutFooterEmailTitle}
+          </h4>
           <p className='text-center text-sm text-gray-400'>
             xsamansafaeix@gmail.com
           </p>
@@ -58,11 +65,13 @@ const Footer: FC<FooterProps> = () => {
               <path d='M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z' />
             </svg>
           </span>
-          <h4 className='text-center mb-1 text-xl font-bold'>تلگرام</h4>
+          <h4 className='text-center mb-1 text-xl font-bold'>
+            {t.layoutFooterTelegramTitle}
+          </h4>
           <p className='text-center text-sm text-gray-400'>saman_safaei_ir</p>
         </li>
       </ul>
-      <p className='text-center text-gray-400'>- طراحی و توسعه توسط سامان صفائی -</p>
+      <p className='text-center text-gray-400'>- {t.layoutFooterCopyright} -</p>
     </footer>
   );
 };
