@@ -1,0 +1,21 @@
+{
+  "layoutHeaderName": "I'm Saman Safaei",
+  "layoutHeaderTitle": "Front-End Developer",
+  "homeAboutTitle": "About me",
+  "homeAboutDescription": "My name is Saman Safaei and I have been working with React and JavaScript for a year. I am almost fluent in TypeScript and I prefer this language to JavaScript.",
+  "homeAboutDownloadResume": "Download Resume",
+  "homeSkillsTitle": "Skills",
+  "skillCLevel": "Beginner",
+  "skillBLevel": "Average",
+  "skillALevel": "Professional",
+  "homePortfolioTitle": "Portfolio",
+  "layoutFooterTitle": "Contact With Me",
+  "layoutFooterPhoneTitle": "Phone Number",
+  "layoutFooterEmailTitle": "Email",
+  "layoutFooterTelegramTitle": "Telegram",
+  "layoutFooterCopyright": "Designed and developed by Saman Safaei",
+  "navbarMainPageBtn": "Main Page",
+  "navbarBlogBtn": "Blog",
+  "comingSoon": "Coming Soon",
+  "pageInDevelop": "This page is under development"
+}
