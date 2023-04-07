@@ -2,13 +2,15 @@ import type { FC } from 'react';
 import { useAppDispatch, useSelect } from '@/store';
 import { actions as uiActions } from '@/store/ui-slice';
 import { Josefin_Sans } from 'next/font/google';
-import SidebarLink from "@/components/layout/sidebar/SidebarLink";
+import SidebarLink from '@/components/layout/sidebar/SidebarLink';
+import useLocale from '@/hooks/useLocale';
 
 const josefin = Josefin_Sans({ subsets: ['latin'] });
 
 export interface SidebarProps {}
 
 const Sidebar: FC<SidebarProps> = () => {
+  const { t, dir } = useLocale();
   const isSidebarOpen = useSelect(state => state.ui.isSidebarOpen);
   const classes = isSidebarOpen ? 'translate-y-0' : '-translate-y-full';
 
@@ -37,9 +39,11 @@ const Sidebar: FC<SidebarProps> = () => {
         </button>
         <p className={`${josefin.className} font-bold text-lg`}>Saman Safaei</p>
       </div>
-      <div className='flex flex-col items-center grow justify-center overflow-y-auto overflow-x-hidden gap-4'>
-        <SidebarLink href='/'>صفحه اصلی</SidebarLink>
-        <SidebarLink href='/blog'>وبلاگ</SidebarLink>
+      <div
+        dir={dir}
+        className='flex flex-col items-center grow justify-center overflow-y-auto overflow-x-hidden gap-4'>
+        <SidebarLink href='/'>{t.navbarMainPageBtn}</SidebarLink>
+        <SidebarLink href='/blog'>{t.navbarBlogBtn}</SidebarLink>
       </div>
     </div>
   );
