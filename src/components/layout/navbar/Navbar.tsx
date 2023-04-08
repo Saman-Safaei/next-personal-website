@@ -22,8 +22,8 @@ const Navbar: FC = () => {
     ? 'fixed top-0 right-0 bg-gray-700/50'
     : '-mt-navbar border-solid border-b border-b-gray-700/70';
 
-  const englishBtnClasses = locale === 'en' ? 'text-primary-light' : '';
-  const farsiBtnClasses = locale === 'fa' ? 'text-primary-light' : '';
+  const englishBtnClasses = locale === 'en' ? 'bg-primary px-5 py-1 rounded-t-md' : 'px-5 py-1 rounded-t-md';
+  const farsiBtnClasses = locale === 'fa' ? 'bg-primary px-5 py-1 rounded-b-md' : 'px-5 py-1 rounded-b-md';
 
   return (
     <Fragment>
