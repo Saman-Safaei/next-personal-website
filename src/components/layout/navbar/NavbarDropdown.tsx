@@ -49,7 +49,7 @@ const NavbarDropdown: FC<NavbarDropdownProps> = ({
       <button
         onClick={toggleOpenHandler}
         className={`peer w-fit flex flex-row items-center py-1 gap-1 border-solid border-b ${btnBorderClass} transition-colors duration-300`}>
-        <span>{title}</span>
+        <span className='text-gray-300'>{title}</span>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
@@ -66,7 +66,7 @@ const NavbarDropdown: FC<NavbarDropdownProps> = ({
       </button>
       <div
         onClick={toggleOpenHandler}
-        className={`${dropdownContentShow} absolute top-[125%] ${dropdownContentClasses} px-4 py-2 bg-gray-700/90 w-max max-w-sm rounded-md ${contentClassName}`}>
+        className={`${dropdownContentShow} absolute top-[125%] ${dropdownContentClasses} bg-gray-700/90 w-max max-w-sm rounded-md ${contentClassName}`}>
         {children}
       </div>
     </li>
