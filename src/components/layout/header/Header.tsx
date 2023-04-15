@@ -45,7 +45,7 @@ const Header: FC<HeaderProps> = () => {
             />
           </HeaderIcons>
         </div>
-        <div className='w-full sm:w-[70%] md:w-1/2 lg:w-1/3 shrink-0'>
+        <div className='w-[80%] sm:w-[60%] md:w-[40%] lg:w-[30%] shrink-0'>
           <div className='w-full bg-gradient-to-br from-gray-300/5 to-gray-300/10 rounded-full p-6 overflow-hidden border-dashed border-4 border-gray-700'>
             <Image
               className='block w-full aspect-square rounded-full animate-spin-slow'
