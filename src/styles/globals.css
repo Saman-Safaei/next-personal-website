@@ -21,6 +21,25 @@
   transition: transform 300ms;
 }
 
+.fade-enter {
+  transform: translateY(-1.5rem);
+  opacity: 0;
+}
+.fade-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 300ms;
+}
+.fade-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+.fade-exit-active {
+  transform: translateY(1.5rem);
+  opacity: 0;
+  transition: all 300ms;
+}
+
 @layer base {
   html,
   body {
