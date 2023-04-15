@@ -44,6 +44,7 @@ const Sidebar: FC<SidebarProps> = () => {
         className='flex flex-col items-center grow justify-center overflow-y-auto overflow-x-hidden gap-4'>
         <SidebarLink href='/'>{t.navbarMainPageBtn}</SidebarLink>
         <SidebarLink href='/blog'>{t.navbarBlogBtn}</SidebarLink>
+        <SidebarLink href='/about'>{t.navbarAboutBtn}</SidebarLink>
       </div>
     </div>
   );
