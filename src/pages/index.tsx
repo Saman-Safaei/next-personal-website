@@ -1,13 +1,11 @@
 import type { GetStaticProps } from 'next';
 import type { NextPageWithLayout } from '@/pages/_app';
 import DefaultLayout from '@/components/layout/DefaultLayout';
-import Image from 'next/image';
 import Skill from '@/components/pages/index/skill/Skill';
 import SkillContainer from '@/components/pages/index/skill/SkillContainer';
 import Projects from '@/components/pages/index/project/Projects';
 import Project from '@/components/pages/index/project/Project';
 
-import devImage from '~/public/images/ab-img.png';
 import parsAcademyScreenShot from '~/public/images/parsacademy-screenshot.png';
 import rSpotifyScreenShot from '~/public/images/r-spotify-screenshot.png';
 import useLocale from '@/hooks/useLocale';
