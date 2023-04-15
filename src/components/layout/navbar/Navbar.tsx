@@ -43,6 +43,7 @@ const Navbar: FC = () => {
               <ul className='hidden lg:flex h-full flex-row items-center gap-6'>
                 <NavbarLink url='/'>{t.navbarMainPageBtn}</NavbarLink>
                 <NavbarLink url='/blog'>{t.navbarBlogBtn}</NavbarLink>
+                <NavbarLink url='/about'>{t.navbarAboutBtn}</NavbarLink>
               </ul>
               <button
                 onClick={() => dispatch(uiActions.openSidebar())}
