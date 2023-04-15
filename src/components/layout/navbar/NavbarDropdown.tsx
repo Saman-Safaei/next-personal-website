@@ -1,6 +1,7 @@
 import type { FC, ReactNode } from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import useLocale from '@/hooks/useLocale';
+import { CSSTransition } from 'react-transition-group';
 
 export interface NavbarDropdownProps {
   children?: ReactNode;
@@ -16,6 +17,7 @@ const NavbarDropdown: FC<NavbarDropdownProps> = ({
   const { dir } = useLocale();
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLLIElement>(null);
+  const contentNodeRef = useRef<HTMLDivElement>(null);
 
   const toggleOpenHandler = () => {
     setOpen(prevValue => !prevValue);
@@ -42,7 +44,6 @@ const NavbarDropdown: FC<NavbarDropdownProps> = ({
     ? 'border-b-primary-light'
     : 'border-b-transparent';
   const dropdownContentClasses = dir === 'rtl' ? '-right-0' : '-left-0';
-  const dropdownContentShow = open ? 'block' : 'hidden';
 
   return (
     <li ref={dropdownRef} className='relative inline-block'>
@@ -64,11 +65,19 @@ const NavbarDropdown: FC<NavbarDropdownProps> = ({
           />
         </svg>
       </button>
-      <div
-        onClick={toggleOpenHandler}
-        className={`${dropdownContentShow} absolute top-[125%] ${dropdownContentClasses} bg-gray-700/90 w-max max-w-sm rounded-md ${contentClassName}`}>
-        {children}
-      </div>
+      <CSSTransition
+        in={open}
+        nodeRef={contentNodeRef}
+        timeout={300}
+        classNames='fade'
+        unmountOnExit>
+        <div
+          ref={contentNodeRef}
+          onClick={toggleOpenHandler}
+          className={`absolute top-[125%] ${dropdownContentClasses} bg-gray-700/90 w-max max-w-sm rounded-md ${contentClassName}`}>
+          {children}
+        </div>
+      </CSSTransition>
     </li>
   );
 };
